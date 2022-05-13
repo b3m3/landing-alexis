@@ -1,0 +1,54 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  // &.scroll {
+  //   .header__wrapper {
+  //       position: fixed;
+  //   }
+  //   .header__main {
+  //       min-height: 50px;
+  //   }
+  // }
+  &__wrapp {
+    background-color: #fff;
+  }
+  &__main {
+    min-height: rem(75);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+  }
+}
+
+.logo-header {
+  &__logo {
+    font-family: 'Wisdom-Script';
+    font-size: rem(35);
+    line-height: 0.77;
+    color: inherit;
+    & span {
+        color: $redColor;
+    }
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column-gap: rem(10);
+  }
+  &__link {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.93;
+    color: #272727;
+
+    transition: .3s ease;
+    @include pc {&:hover {color: $redColor;}}
+  }
+}

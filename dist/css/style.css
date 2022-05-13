@@ -72,17 +72,93 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+@font-face {
+  font-family: "icomoon";
+  font-display: swap;
+  src: url("../fonts/icomoon.woff2") format("woff2"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LibreBaskerville";
+  font-display: swap;
+  src: url("../fonts/LibreBaskerville-Bold.woff2") format("woff2"), url("../fonts/LibreBaskerville-Bold.woff") format("woff"), url("../fonts/LibreBaskerville-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LibreBaskerville";
+  font-display: swap;
+  src: url("../fonts/LibreBaskerville-Regular.woff2") format("woff2"), url("../fonts/LibreBaskerville-Regular.woff") format("woff"), url("../fonts/LibreBaskerville-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sacramento";
+  font-display: swap;
+  src: url("../fonts/Sacramento-Regular.woff2") format("woff2"), url("../fonts/Sacramento-Regular.woff") format("woff"), url("../fonts/Sacramento-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Wisdom";
+  font-display: swap;
+  src: url("../fonts/Wisdom-Script.woff2") format("woff2"), url("../fonts/Wisdom-Script.woff") format("woff"), url("../fonts/Wisdom-Script.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?wkzcr");
+  src: url("../fonts/icomoon.eot?wkzcr#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff?wkzcr") format("woff"), url("../fonts/icomoon.svg?wkzcr#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ICON CLASS */
 .burger {
   display: none;
-  width: 1.875rem;
-  height: 1.25rem;
+  width: 1.75rem;
+  height: 1.125rem;
   position: relative;
 }
 .burger span {
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #1F1534;
+  background-color: #fc5f45;
   border-radius: 6px;
   transition: 0.3s ease-in-out;
 }
@@ -95,7 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .burger span:nth-child(3) {
   bottom: 0;
-  background-color: #1F1534;
+  background-color: #fc5f45;
 }
 .burger.active span:nth-child(1) {
   top: 50%;
@@ -143,9 +219,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 6.25rem 0 1.875rem 0;
     justify-content: unset;
     flex-direction: column;
+    align-items: center;
     flex-wrap: nowrap;
     gap: 1.25rem;
-    background-color: #458FF6;
+    background-color: #38c695;
     transition: 0.6s ease;
   }
   .menu .menu__link {
@@ -157,6 +234,7 @@ h1, h2, h3, h4, h5, h6 {
     pointer-events: auto;
   }
   .menu.show-menu .menu__list {
+    gap: 0.625rem;
     right: 0;
   }
 }
@@ -210,5 +288,51 @@ body {
 
 /* ======== Blocks ======== */
 /* header */
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+.header__wrapp {
+  background-color: #fff;
+}
+.header__main {
+  min-height: 4.6875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.logo-header__logo {
+  font-family: "Wisdom-Script";
+  font-size: 2.1875rem;
+  line-height: 0.77;
+  color: inherit;
+}
+.logo-header__logo span {
+  color: #fc5f45;
+}
+
+.menu__list {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column-gap: 0.625rem;
+}
+.menu__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.93;
+  color: #272727;
+  transition: 0.3s ease;
+}
+@media (any-hover: hover) {
+  .menu__link:hover {
+    color: #fc5f45;
+  }
+}
+
 /* intro */
 /* footer */
