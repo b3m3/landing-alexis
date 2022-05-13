@@ -148,6 +148,111 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ICON CLASS */
+.icon-share:before {
+  content: "\e919";
+  color: #fc5f45;
+}
+
+.icon-google:before {
+  content: "\e900";
+}
+
+.icon-instagram01:before {
+  content: "\e901";
+}
+
+.icon-twitter01:before {
+  content: "\e902";
+}
+
+.icon-facebook01:before {
+  content: "\e903";
+}
+
+.icon-medal:before {
+  content: "\e904";
+}
+
+.icon-calendar:before {
+  content: "\e905";
+}
+
+.icon-monitor:before {
+  content: "\e906";
+}
+
+.icon-square_arrow:before {
+  content: "\e907";
+}
+
+.icon-schedule2:before {
+  content: "\e908";
+}
+
+.icon-buttons:before {
+  content: "\e909";
+}
+
+.icon-gift:before {
+  content: "\e90a";
+}
+
+.icon-heard:before {
+  content: "\e90b";
+}
+
+.icon-people:before {
+  content: "\e90c";
+}
+
+.icon-vector:before {
+  content: "\e90d";
+}
+
+.icon-instagram:before {
+  content: "\e90e";
+}
+
+.icon-linkedIn:before {
+  content: "\e90f";
+}
+
+.icon-twitter:before {
+  content: "\e910";
+}
+
+.icon-facebook:before {
+  content: "\e911";
+}
+
+.icon-document:before {
+  content: "\e912";
+}
+
+.icon-app:before {
+  content: "\e913";
+}
+
+.icon-image:before {
+  content: "\e914";
+}
+
+.icon-map:before {
+  content: "\e915";
+}
+
+.icon-check:before {
+  content: "\e916";
+}
+
+.icon-clock:before {
+  content: "\e917";
+}
+
+.icon-dollar:before {
+  content: "\e918";
+}
+
 .burger {
   display: none;
   width: 1.75rem;
