@@ -1,0 +1,21 @@
+$container: rem(1170);
+$ff: 'Poppins';
+$fw: 300;
+$bg: #fff;
+$mc: #616161;
+$redColor: #fc5f45;
+$greenColor: #38c695;
+$violetColor: #b27cf5;
+$yellowColor: #feb960;
+
+html {scroll-behavior: smooth; font-size: 100%;}
+body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
+.app {display: flex;flex-direction: column;height: 100%;}
+.main {flex: 1 1 auto;}
+.container {max-width: $container;margin: 0 auto;padding: 0 rem(15);}
+
+.ibg {width: 100%;height: 100%;object-fit: cover;}
+.ibga {position: relative;& img {position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: contain;}}
+
+//-----------------------------------------------------------------------
+
