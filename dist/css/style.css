@@ -937,7 +937,8 @@ body {
   justify-content: center;
   align-items: center;
   color: #fff;
-  transition: 0.5s ease-out;
+  opacity: 1;
+  transition: 0.7s ease;
 }
 .video__content::before {
   position: absolute;
@@ -947,7 +948,11 @@ body {
   height: 100%;
   left: 0;
   top: 0;
-  background-color: rgb(83, 83, 83);
+  background-color: rgba(38, 39, 50, 0.85);
+}
+.video__content.play {
+  opacity: 0;
+  height: 0;
 }
 
 .content-video__title {
