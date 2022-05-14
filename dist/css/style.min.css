@@ -546,7 +546,6 @@ body {
 @media (max-width: 767px) {
   .intro {
     margin: 3.125rem 0 0 0;
-    height: 100%;
   }
 }
 .intro__main {
@@ -700,13 +699,13 @@ body {
   background-color: #fff;
   padding-left: 83px;
   padding-right: 83px;
-  padding-top: 94px;
-  padding-bottom: 106px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 30px;
   max-height: 34.375rem;
   max-width: 40.75rem;
+  height: 100%;
 }
 @media (max-width: 1140px) {
   .about__info {
@@ -716,16 +715,6 @@ body {
 @media (max-width: 1140px) {
   .about__info {
     padding-right: calc(20px + 63 * ((100vw - 320px) / 820));
-  }
-}
-@media (max-width: 1140px) {
-  .about__info {
-    padding-top: calc(20px + 74 * ((100vw - 320px) / 820));
-  }
-}
-@media (max-width: 1140px) {
-  .about__info {
-    padding-bottom: calc(20px + 86 * ((100vw - 320px) / 820));
   }
 }
 @media (max-width: 1140px) {
@@ -755,6 +744,8 @@ body {
     position: relative;
     max-height: unset;
     max-width: unset;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
 
