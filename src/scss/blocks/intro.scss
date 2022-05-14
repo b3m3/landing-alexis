@@ -1,0 +1,85 @@
+.intro {
+  margin: rem(75) 0 0 0;
+  padding: 0 rem(15);
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('../../img/intro/01.jpg') no-repeat center;
+    background-size: cover;
+  }
+  &::after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgba(38, 39, 50, 0.85);
+  }
+  @include tablet {
+    margin: rem(50) 0 0 0;
+    height: 100%;
+  }
+  &__main {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    @include fit('padding-top', 175, 30, 1);
+    @include fit('padding-bottom', 175, 30, 1);
+  }
+  &__title {
+    font-family: 'LibreBaskerville';
+    @include fit('font-size', 60, 30, 1);
+    @include fit('line-height', 85, 40, 1);
+    color: #fff;
+  }
+  &__button {
+    @include fit('padding-top', 49, 30, 1);
+    @include fit('padding-bottom', 83, 30, 1);
+  }
+  &__info {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    grid-gap: rem(10);
+    @include tablet {
+      grid-gap: rem(20);
+      grid-template: repeat(3, auto) / 1fr;
+    }
+  }
+}
+
+.button-intro {
+  &__btn {
+    padding: rem(18) rem(41);
+  }
+}
+
+.info-intro {
+  &__col {
+    display: flex;
+    flex-direction: column;
+    @include fit('gap', 38, 15, 1);
+    &:nth-child(1) {color: $green;}
+    &:nth-child(2) {color: $violet;}
+    &:nth-child(3) {color: $yellow;}
+  }
+  &__icon {
+    font-size: rem(40);
+  }
+  &__text {
+      font-size: rem(18);
+      font-weight: 500;
+  }
+}

@@ -21,6 +21,9 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(20);
+    @include tablet {
+      min-height: rem(50);
+    }
   }
 }
 
@@ -31,7 +34,7 @@
     line-height: 0.77;
     color: inherit;
     & span {
-        color: $redColor;
+        color: $red;
     }
   }
 }
@@ -40,15 +43,15 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    grid-column-gap: rem(10);
+    grid-column-gap: rem(22);
   }
   &__link {
     font-size: rem(14);
     font-weight: 500;
     line-height: 1.93;
     color: #272727;
-
     transition: .3s ease;
-    @include pc {&:hover {color: $redColor;}}
+    
+    @include pc {&:hover {color: $red;}}
   }
 }

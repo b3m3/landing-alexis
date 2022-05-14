@@ -3,10 +3,11 @@ $ff: 'Poppins';
 $fw: 300;
 $bg: #fff;
 $mc: #616161;
-$redColor: #fc5f45;
-$greenColor: #38c695;
-$violetColor: #b27cf5;
-$yellowColor: #feb960;
+
+$red: #fc5f45;
+$green: #38c695;
+$violet: #b27cf5;
+$yellow: #feb960;
 
 html {scroll-behavior: smooth; font-size: 100%;}
 body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
@@ -15,7 +16,57 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 .container {max-width: $container;margin: 0 auto;padding: 0 rem(15);}
 
 .ibg {width: 100%;height: 100%;object-fit: cover;}
-.ibga {position: relative;& img {position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: contain;}}
+.ibga {position: relative;& img {position: absolute;left: 0;top: 0;width: 100%;height: 100%;object-fit: cover;}}
 
 //-----------------------------------------------------------------------
 
+.decore-lines {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  & span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    &:nth-child(1) {left: 0;background-color: $red;}
+    &:nth-child(2) {left: 25%;background-color: $green;}
+    &:nth-child(3) {left: 50%;background-color: $violet;}
+    &:nth-child(4) {left: 75%;background-color: $yellow;}
+  }
+}
+
+.btn {
+  display: inline-block;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: rem(16);
+  font-weight: 600;
+  text-align: center;
+  background-color: $red;
+  border-radius: rem(25);
+  color: #fff;
+  transition: .26s ease;
+
+  @include pc {
+    &:hover {
+      box-shadow: 0 0 7px 2px #ff2600c0;
+      transform: scale(1.012);
+    }
+  }
+}
+
+.title {
+  font-family: 'LibreBaskerville';
+  @include fit('font-size', 50, 30, 1);
+  @include fit('line-height', 80, 40, 1);
+  font-weight: bold;
+  color: #313131;
+}
+
+.text {
+  font-family: 'Poppins';
+  font-size: rem(15);
+  line-height: rem(27);
+}
