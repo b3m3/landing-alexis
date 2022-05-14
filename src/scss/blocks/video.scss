@@ -3,6 +3,9 @@
     position: relative;
     display: grid;
     grid-template: minmax(rem(500), 1fr) / 1fr;
+    @include tablet {
+      grid-template: minmax(rem(300), 1fr) / 1fr;
+    }
   }
   &__item {
     position: relative;

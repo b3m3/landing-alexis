@@ -23,6 +23,8 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 
 .main-block {
   position: relative;
+  @include fit('padding-top', 142, 50, 1);
+  @include fit('padding-bottom', 149, 50, 1);
   &::before {
     position: absolute;
     left: 50%;

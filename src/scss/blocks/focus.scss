@@ -1,8 +1,6 @@
 .focus {
   &__main {
     background-color: #f7f7f7;
-    @include fit('padding-top', 142, 50, 1);
-    @include fit('padding-bottom', 149, 50, 1);
     &::before {content: '02';}
   }
   &__body {

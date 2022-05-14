@@ -1,0 +1,75 @@
+.portfolio {
+  &__main {
+    &::before {content: '03';}
+  }
+  &__body {
+    display: grid;
+    grid-auto-rows: minmax(rem(288), 1fr);
+    gap: rem(21);
+    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+  }
+}
+
+.body-portfolio {
+  &__item {
+    position: relative;
+    text-align: center;
+    transition: .4s ease;
+    @include pc {
+      &:hover {
+        padding: 0 0 rem(61) 0;
+        .body-portfolio__hover {
+          opacity: 1;
+        }
+        .body-portfolio__img::before {
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+    @include sensor {
+      padding: 0 0 rem(61) 0;
+      .body-portfolio__hover {
+        opacity: 1;
+      }
+      .body-portfolio__img::before {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+  &__img {
+    margin: 0 0 60px 0;
+    display: flex;
+    height: 100%;
+    transition: .4s ease;
+    &::before {
+      cursor: pointer;
+      position: absolute;
+      content: '';
+      z-index: 2;
+      width: rem(61);
+      height: rem(61);
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background: url('../img/portfolio/icon.svg') no-repeat;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: .4s ease;
+    }
+  }
+  &__hover {
+    position: absolute;
+    width: 100%;
+    height: rem(61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: .4s ease;
+  }
+}
