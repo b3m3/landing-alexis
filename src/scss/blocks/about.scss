@@ -2,7 +2,6 @@
   &__main {
     position: relative;
     @include fit('margin-top', 150, 50, 1);
-    @include fit('margin-bottom', 150, 50, 1);
     display: grid;
     align-items: center;
     grid-template: minmax(rem(700), auto) / minmax(auto, rem(555)) auto;

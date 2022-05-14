@@ -1,5 +1,6 @@
 .video {
   &__main {
+    @include fit('margin-top', 150, 50, 1);
     position: relative;
     display: grid;
     grid-template: minmax(rem(500), 1fr) / 1fr;

@@ -1,6 +1,6 @@
 $container: rem(1170);
 $ff: 'Poppins';
-$fw: 300;
+$fw: 400;
 $bg: #fff;
 $mc: #616161;
 
@@ -20,11 +20,20 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 
 //-----------------------------------------------------------------------
 
+@keyframes tab-show {
+  from {
+    opacity: 0;
+    transform: translate(rem(-25));
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 
 .main-block {
   position: relative;
-  @include fit('padding-top', 142, 50, 1);
-  @include fit('padding-bottom', 149, 50, 1);
+  @include fit('padding-top', 145, 50, 1);
   &::before {
     position: absolute;
     left: 50%;

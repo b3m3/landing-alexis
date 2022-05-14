@@ -1,6 +1,7 @@
 .focus {
+  background-color: #f7f7f7;
   &__main {
-    background-color: #f7f7f7;
+    @include fit('margin-top', 150, 50, 1);
     &::before {content: '02';}
   }
   &__body {
