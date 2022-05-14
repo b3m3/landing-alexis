@@ -20,6 +20,33 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
 
 //-----------------------------------------------------------------------
 
+
+.main-block {
+  position: relative;
+  &::before {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    font-family: 'Poppins';
+    @include fit('font-size', 274, 137, 1);
+    line-height: 0.85;
+    font-weight: 600;
+    color: rgba(224, 224, 224, 0.3);
+    z-index: 0;
+  }
+}
+
+.header-block {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include fit('padding-bottom', 79, 30, 1);
+  @include fit('gap', 39, 20, 1);
+}
+
 .decore-lines {
   position: absolute;
   bottom: 0;
@@ -34,6 +61,18 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
     &:nth-child(2) {left: 25%;background-color: $green;}
     &:nth-child(3) {left: 50%;background-color: $violet;}
     &:nth-child(4) {left: 75%;background-color: $yellow;}
+  }
+}
+
+.decore-line {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 3px;
   }
 }
 
@@ -65,8 +104,11 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
   color: #313131;
 }
 
+.subtitle {
+  @include fit('font-size', 18, 16, 1);
+}
+
 .text {
-  font-family: 'Poppins';
   font-size: rem(15);
   line-height: rem(27);
 }

@@ -1,0 +1,46 @@
+.focus {
+  &__main {
+    background-color: #f7f7f7;
+    @include fit('padding-top', 142, 50, 1);
+    @include fit('padding-bottom', 149, 50, 1);
+    &::before {content: '02';}
+  }
+  &__body {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    @include fit('gap', 29, 15, 1);
+    @include fit('grid-auto-rows', 350, 250, 1);
+    grid-template-columns: repeat(auto-fit, minmax(rem(263), 1fr));
+  }
+}
+
+.body-focus {
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include fit('gap', 32, 20, 1);
+    @include fit('padding-left', 33, 10, 1);
+    @include fit('padding-right', 33, 10, 1);
+    background-color: #fff;
+    box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.05);
+    &:nth-child(1)::before {background-color: $red;}
+    &:nth-child(2)::before {background-color: $green;}
+    &:nth-child(3)::before {background-color: $violet;}
+    &:nth-child(4)::before {background-color: $yellow;}
+  }
+  &__icon {
+    font-size: rem(40);
+    &_red {color: $red;}
+    &_green {color: $green;}
+    &_violet {color: $violet;}
+    &_yellow {color: $yellow;}
+  }
+  &__title {
+    font-size: rem(20);
+    font-weight: 500;
+    color: #313131;
+  }
+}
