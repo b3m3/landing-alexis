@@ -1,0 +1,57 @@
+.video {
+  &__main {
+    position: relative;
+    display: grid;
+    grid-template: minmax(rem(500), 1fr) / 1fr;
+  }
+  &__item {
+    position: relative;
+    & video {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+  &__content {
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: .5s ease-out;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: rgb(83, 83, 83);
+    }
+  }
+}
+
+.content-video {
+  &__title {
+    font-size: rem(30);
+  }
+  &__play {
+    cursor: pointer;
+    margin: rem(33) rem(41);
+    @include fit('width', 80, 40, 1);
+    @include fit('height', 80, 40, 1);
+  }
+}
