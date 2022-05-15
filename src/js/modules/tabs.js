@@ -13,7 +13,7 @@ const tabs = () => {
  
       tab.classList.add('active');
       contents[i].classList.add('active');
-      wrapp.scrollIntoView({block: "start"});
+      wrapp.scrollIntoView({block: "center"});
     });
   });
 };

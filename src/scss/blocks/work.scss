@@ -1,0 +1,110 @@
+.work {
+  &__main {
+    &::before{content: '05';}
+  }
+  &__body {
+    position: relative;
+  }
+  &__info  {
+    display: grid;
+    justify-content: space-between;
+    grid-template: auto / 1fr;
+    @include tablet {
+      grid-template: repeat(8, 1fr) / 1fr;
+    }
+  }
+  &__images {
+    position: absolute;
+    left: 50%;
+    top: rem(51);
+    height: 100%;
+    transform: translate(-50%);
+
+    display: grid;
+    grid-template: repeat(4, 1fr) / minmax(auto, rem(556));
+
+    @include tablet {
+      top: 0;
+      grid-template: repeat(8, 1fr) / 1fr;
+      width: 100%;
+    }
+  }
+}
+
+.info-work {
+  &__item {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    @include fit('gap', 21, 15, 1);
+    box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    @include fit('padding-left', 123, 15, 1);
+    @include fit('padding-top', 40, 15, 1);
+    @include fit('padding-bottom', 80, 15, 1);
+    max-width: rem(458);
+    &::after {
+      position: absolute;
+      @include fit('top', 35, 0, 1);
+      @include fit('left', 33, 0, 1);
+
+      font-family: 'LibreBaskerville';
+      @include fit('font-size', 50, 35, 1);
+      color: #e0e0e0;
+    }
+    &:nth-child(1) {
+      &::before {background-color: $red;}
+      &::after {content: '01';}
+      @include tablet {
+        grid-row: 1 / 2;
+      }
+    }
+    &:nth-child(2) {
+      justify-self: end;
+      &::before {background-color: $green;}
+      &::after {content: '02';}
+      @include tablet {
+        grid-row: 3 / 4;
+      }
+    }
+    &:nth-child(3) {
+      &::before {background-color: $violet;}
+      &::after {content: '03';}
+      @include tablet {
+        grid-row: 5 / 6;
+      }
+    }
+    &:nth-child(4) {
+      justify-self: end;
+      &::before {background-color: $yellow;}
+      &::after {content: '04';}
+      @include tablet {
+        grid-row: 7 / 8;
+      }
+    }
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 2;
+    @include fit('font-size', 25, 18, 1);
+    color: #272727;
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+    @include fit('padding-right', 70, 15, 1);
+  }
+}
+
+.images-work {
+  &__img {
+    &:nth-child(1) {@include tablet {grid-row: 2 / 3;}}
+    &:nth-child(2) {@include tablet {grid-row: 4 / 5;}}
+    &:nth-child(3) {@include tablet {grid-row: 6 / 7;}}
+    &:nth-child(4) {@include tablet {grid-row: 8 / 9;}}
+  }
+}
