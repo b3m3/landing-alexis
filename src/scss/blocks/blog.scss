@@ -1,0 +1,114 @@
+.blog {
+  background-color: #f7f7f7;
+  &__main {
+    @include fit('margin-top', 150, 50, 1);
+    @include fit('padding-bottom', 150, 50, 1);
+    &::before{content: '09';}
+  }
+  &__body {
+    display: grid;
+    gap: rem(30);
+    grid-template: minmax(rem(675), 1fr) / 1fr 1fr;
+    @include laptop {
+      gap: rem(23);
+      grid-template: auto auto / 1fr;
+    }
+  }
+  &__info {
+    box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    display: grid;
+    grid-template: minmax(auto, rem(443)) auto / 1fr;
+  }
+  &__posts {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+    gap: rem(23);
+  }
+  &__name {
+    text-transform: uppercase;
+    font-weight: 500;
+    // line-height: rem(35);
+    &_red {color: $red;}
+    &_green {color: $green;}
+    &_violet {color: $violet;}
+    &_yellow {color: $yellow;}
+  }
+  &__data {
+    font-size: rem(13);
+    // line-height: rem(35);
+    &_white {color: rgba(255, 255, 255, 0.7);}
+  }
+  &__title {
+    @include fit('font-size', 20, 16, 1);
+    @include fit('line-height', 35, 22, 1);
+    font-weight: 500;
+    color: #272727;
+  }
+  &__link {
+    font-weight: 500;
+    &_black {color: #272727}
+    &_green {color: $green;}
+    &_violet {color: $violet;}
+    &_yellow {color: $yellow;}
+  }
+}
+
+.info-blog {
+  &__top {
+    position: relative;
+    z-index: 1;
+  }
+  &__img {
+    height: 100%;
+    &::after {background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, .3));}
+    & img {
+      object-position: 50% 30%;
+    }
+  }
+  &__label {
+    position: absolute;
+    z-index: 2;
+    @include fit('bottom', 35, 20, 1);
+    @include fit('left', 50, 15, 1);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include fit('gap', 20, 10, 1);
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: rem(11);
+    @include fit('padding-left', 50, 12, 1);
+    @include fit('padding-top', 30, 12, 1);
+    @include fit('padding-right', 55, 12, 1);
+    @include fit('padding-bottom', 40, 12, 1);
+    &::before{background-color: $red;}
+  }
+}
+
+.posts-blog {
+  &__item {
+    @include fit('padding-left', 37, 12, 1);
+    @include fit('padding-top', 33, 12, 1);
+    @include fit('padding-right', 50, 12, 1);
+    @include fit('padding-bottom', 30, 12, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: rem(10);
+  }
+  &__item {
+    box-shadow: 0 0 rem(20) 0 rgba(0, 0, 0, 0.05);
+    &:nth-child(1) {&::before {background-color: $green;}}
+    &:nth-child(2) {&::before {background-color: $violet;}}
+    &:nth-child(3) {&::before {background-color: $yellow;}}
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @include fit('gap', 25, 10, 1);
+  }
+}

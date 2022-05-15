@@ -1,4 +1,4 @@
-const tabs = (buttons, tabContents, tabsWrapp, scrollTo) => {
+const tabs = (buttons, tabContents, tabsWrapp) => {
   const tabs = document.querySelectorAll(buttons, );
   const contents = document.querySelectorAll(tabContents);
 
@@ -13,7 +13,7 @@ const tabs = (buttons, tabContents, tabsWrapp, scrollTo) => {
  
       tab.classList.add('active');
       contents[i].classList.add('active');
-      wrapp.scrollIntoView({block: scrollTo});
+      wrapp.scrollIntoView({block: "center"});
     });
   });
 };

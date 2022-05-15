@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   webp();
   burger(768);
   playVideo();
-  tabs('.card-team', '.info-team__item', '.info-team', 'center');
+  tabs('.card-team', '.info-team__item', '.info-team');
   createDots();
-  tabs('.testimonials__dots span', '.item-testimonials', '.testimonials__items', 'start');
+  tabs('.testimonials__dots span', '.item-testimonials', '.testimonials__items');
 });
