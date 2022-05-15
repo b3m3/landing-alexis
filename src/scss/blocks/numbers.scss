@@ -1,0 +1,104 @@
+.numbers {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .85) url('../../img/numbers/01.jpg') no-repeat center;
+  }
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(38, 39, 50, 0.85);
+  }
+  &__main {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    grid-template: auto / repeat(4, 1fr);
+    min-height: rem(464);
+    @include tablet {
+      grid-template: auto / repeat(2, 1fr);
+    }
+    @include mobile-l {
+      padding: rem(30) 0;
+      gap: rem(30);
+      grid-template: auto / 1fr;
+    }
+  }
+  &__item {
+    position: relative;
+    z-index: 2;
+  }
+}
+.item-numbers {
+  &__icon {
+    font-size: rem(40);
+    &_red {color: $red;}
+    &_green {color: $green;}
+    &_violet {color: $violet;}
+    &_yellow {color: $yellow;}
+  }
+  &__number {
+    font-size: rem(20);
+    font-weight: 500;
+    line-height: rem(80);
+    color: #fefefe;
+  }
+  &__text {
+    color: rgba(254, 254, 254, 0.7);
+  }
+  &__dot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: rem(36) auto 0 auto;
+    border-radius: 50%;
+    width: rem(7);
+    height: rem(7);
+    &::before {
+      position: absolute;
+      content: '';
+      width: rem(15);
+      height: rem(15);
+      border-radius: 50%;
+    }
+    &_red {
+      background-color: $red;
+      &::before {
+        border: 1px solid $red;
+      }
+    }
+    &_green {
+      background-color: $green;
+      &::before {
+        border: 1px solid $green;
+      }
+    }
+    &_violet {
+      background-color: $violet;
+      &::before {
+        border: 1px solid $violet;
+      }
+    }
+    &_yellow {
+      background-color: $yellow;
+      &::before {
+        border: 1px solid $yellow;
+      }
+    }
+  }
+}
+
