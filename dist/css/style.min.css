@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* RESET */
 * {
   padding: 0;
@@ -963,6 +964,7 @@ body {
   height: 100%;
   left: 0;
   top: 0;
+  padding: 0 0.9375rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -987,6 +989,7 @@ body {
 }
 
 .content-video__title {
+  text-align: center;
   font-size: 1.875rem;
 }
 .content-video__play {
@@ -1651,6 +1654,198 @@ body {
 @media (max-width: 767px) {
   .images-work__img:nth-child(4) {
     grid-row: 8/9;
+  }
+}
+
+/* pricing */
+.pricing {
+  background-color: #f7f7f7;
+}
+.pricing__main {
+  margin-top: 201px;
+  padding-bottom: 150px;
+}
+@media (max-width: 1140px) {
+  .pricing__main {
+    margin-top: calc(50px + 151 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .pricing__main {
+    padding-bottom: calc(50px + 100 * ((100vw - 320px) / 820));
+  }
+}
+.pricing__main::before {
+  content: "06";
+}
+.pricing__body {
+  display: grid;
+  text-align: center;
+  gap: 30px;
+  grid-template: 1fr/repeat(3, 1fr);
+}
+@media (max-width: 1140px) {
+  .pricing__body {
+    gap: calc(20px + 10 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 767px) {
+  .pricing__body {
+    grid-template: repeat(3, 1fr)/1fr;
+  }
+}
+.pricing__item {
+  background-color: #fff;
+  box-shadow: 0 0 1.25rem 0 rgba(0, 0, 0, 0.05);
+  padding-bottom: 37px;
+}
+@media (max-width: 1140px) {
+  .pricing__item {
+    padding-bottom: calc(20px + 17 * ((100vw - 320px) / 820));
+  }
+}
+.pricing__item::before {
+  bottom: unset;
+  top: 0;
+}
+.pricing__item:nth-child(1)::before {
+  background-color: #38c695;
+}
+.pricing__item:nth-child(2)::before {
+  background-color: #fc5f45;
+}
+.pricing__item:nth-child(3)::before {
+  background-color: #b27cf5;
+}
+
+.item-pricing__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 80px;
+  color: #313131;
+}
+@media (max-width: 1140px) {
+  .item-pricing__title {
+    line-height: calc(50px + 30 * ((100vw - 320px) / 820));
+  }
+}
+.item-pricing__price {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3125rem;
+  font-size: 0.8125rem;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  width: 6.625rem;
+  height: 6.625rem;
+  border-radius: 50%;
+}
+.item-pricing__price::before {
+  position: absolute;
+  content: "";
+  width: 6.125rem;
+  height: 6.125rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.item-pricing__price_green {
+  background-color: #38c695;
+}
+.item-pricing__price_red {
+  background-color: #fc5f45;
+}
+.item-pricing__price_violet {
+  background-color: #b27cf5;
+}
+.item-pricing__price-number {
+  font-size: 1.5625rem;
+}
+.item-pricing__list {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1140px) {
+  .item-pricing__list {
+    padding-top: calc(15px + 25 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .item-pricing__list {
+    padding-bottom: calc(15px + 25 * ((100vw - 320px) / 820));
+  }
+}
+.item-pricing__list-item {
+  position: relative;
+  line-height: 40px;
+}
+@media (max-width: 1140px) {
+  .item-pricing__list-item {
+    line-height: calc(30px + 10 * ((100vw - 320px) / 820));
+  }
+}
+.item-pricing__list-item:nth-child(4)::before, .item-pricing__list-item:nth-child(5)::before, .item-pricing__list-item:nth-child(6)::before {
+  position: absolute;
+  content: "✓";
+  font-weight: 600;
+  left: -1.25rem;
+  top: 0;
+  color: #313131;
+}
+.item-pricing__list-item span {
+  font-weight: 500;
+}
+.item-pricing__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 1.5625rem;
+  height: 3.125rem;
+  width: 11.25rem;
+  transition: 0.26s ease;
+}
+.item-pricing__button_green {
+  border: 2px solid #38c695;
+  color: #38c695;
+}
+@media (any-hover: hover) {
+  .item-pricing__button_green:hover {
+    background: #38c695;
+    color: #fff;
+  }
+}
+.item-pricing__button_red {
+  border: 2px solid #fc5f45;
+  color: #fc5f45;
+}
+@media (any-hover: hover) {
+  .item-pricing__button_red:hover {
+    background: #fc5f45;
+    color: #fff;
+  }
+}
+.item-pricing__button_violet {
+  border: 2px solid #b27cf5;
+  color: #b27cf5;
+}
+@media (any-hover: hover) {
+  .item-pricing__button_violet:hover {
+    background: #b27cf5;
+    color: #fff;
   }
 }
 
