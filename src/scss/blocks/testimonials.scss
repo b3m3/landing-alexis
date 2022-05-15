@@ -1,0 +1,139 @@
+.testimonials {
+  position: relative;
+  @include fit('padding-bottom', 150, 50, 1);
+  &::before {
+    position: absolute;
+    z-index: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('../../img/testimonials/ibg.jpg') no-repeat center;
+    background-size: cover;
+  }
+  &::after {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(38, 39, 50, 0.85);
+  }
+  &__main {
+    z-index: 2;
+    &::before{content: '07';color: rgba(93, 93, 98, 0.3);}
+  }
+  &__header {
+    .title {
+      color: #fff;
+    }
+    color: #fff;
+  }
+  &__body {
+    position: relative;
+  }
+  &__item {
+    display: none;
+    align-items: center;
+    grid-template: minmax(rem(399), 1fr) / minmax(auto, rem(384)) auto;
+    animation: tab-show 0.8s ease-out;
+
+    &.active {
+      display: grid;
+    }
+
+    @include mq(rem(520)) {
+      grid-template: minmax(rem(350), 1fr) auto / 1fr;
+    }
+  }
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(7);
+
+    & span {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(18);
+      height: rem(18);
+      border: 1px solid #fff;
+      border-radius: 50%;
+      transition: .4s ease;
+
+      &.active {
+        border: 1px solid $red;
+        &::before {
+          position: absolute;
+          content: '';
+          width: rem(10);
+          height: rem(10);
+          background-color: $red;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    @include laptop {
+      bottom: rem(-40);
+      right: 50%;
+      transform: translate(50%, 0);
+    }
+  }
+}
+
+.item-testimonials {
+  &__img {
+    height: 100%;  
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border: solid 10px rgba(0, 0, 0, 0.2);
+    }
+    & img {
+      object-position: 50% 30%;
+    }
+  }
+  &__info {
+    background-color: #fff;
+    @include fit('padding-left', 55, 15, 1);
+    @include fit('padding-top', 40, 15, 1);
+    @include fit('padding-right', 75, 15, 1);
+    @include fit('padding-bottom', 40, 15, 1);
+    &::before {
+      background-color: $red;
+    }
+  }
+  &__info-signature {
+    font-family: 'Sacramento';
+    font-size: rem(40);
+    line-height: rem(80);
+    color: #272727;
+  }
+  &__info-name {
+    font-weight: 500;
+    font-size: rem(18);
+    color: #272727;
+  }
+  &__info-label {
+    padding: rem(13) 0 0 0;
+    font-size: rem(13);
+    color: $red;
+  }
+}
