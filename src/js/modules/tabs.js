@@ -1,10 +1,10 @@
-const tabs = () => {
-  const tabs = document.querySelectorAll('.card-team');
-  const contents = document.querySelectorAll('.info-team__item');
+const tabs = (buttons, tabContents, tabsWrapp, scrollTo) => {
+  const tabs = document.querySelectorAll(buttons, );
+  const contents = document.querySelectorAll(tabContents);
 
   tabs.forEach((tab, i) => {
     tab.addEventListener('click', () => {
-      const wrapp = document.querySelector('.info-team');
+      const wrapp = document.querySelector(tabsWrapp);
       const removeClass = elem => 
         elem.forEach(item => item.classList.remove('active'));
 
@@ -13,9 +13,24 @@ const tabs = () => {
  
       tab.classList.add('active');
       contents[i].classList.add('active');
-      wrapp.scrollIntoView({block: "center"});
+      wrapp.scrollIntoView({block: scrollTo});
     });
   });
 };
 
-export default tabs;
+const createDots = () => {
+  const items = document.querySelectorAll('.item-testimonials');
+  const dotsWrapp = document.querySelector('.testimonials__dots');
+  
+  items.forEach(el => {
+    const span = document.createElement('span');
+    dotsWrapp.append(span);
+  });
+
+  const dots = document.querySelectorAll('.testimonials__dots span');
+
+  dots[0].classList.add('active');
+};
+
+export {tabs, createDots};
+
