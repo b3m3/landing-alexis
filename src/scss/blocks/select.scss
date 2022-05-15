@@ -1,0 +1,55 @@
+.select {
+  &__main {
+    &::before {content: '08';}
+  }
+  &__body {
+    display: grid;
+    @include fit('gap', 73, 20, 1);
+    grid-template-columns: repeat(auto-fit, minmax(rem(280), 1fr));
+  }
+  &__bottom {
+    @include fit('padding-top', 150, 50, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: rem(23);
+  }
+}
+
+.body-select {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(30);
+  }
+  &__item-row {
+    display: flex;
+    align-items: start;
+    gap: rem(14);
+  }
+  &__item-icon {
+    font-size: rem(53);
+    &_red {color: $red;}
+    &_green {color: $green;}
+    &_violet {color: $violet;}
+    &_yellow {color: $yellow;}
+  }
+  &__item-title {
+    font-size: rem(18);
+    font-weight: 500;
+    line-height: rem(26);
+    color: #272727;
+  }
+}
+
+.bottom-select {
+  &__title {
+    @include fit('font-size', 25, 18, 1);
+    line-height: rem(26);
+    color: #272727;
+  }
+  &__button {
+    padding: rem(17) rem(39);
+  }
+}
