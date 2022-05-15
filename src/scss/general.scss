@@ -87,6 +87,22 @@ body {font-family: $ff;font-weight: $fw;color: $mc; background-color: $bg;}
   }
 }
 
+.gradient {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  &_r::after {background-image: linear-gradient(to top, rgba(252, 95, 69, 0.6), rgba(0, 0, 0, .4));}
+  &_g::after {background-image: linear-gradient(to top, rgba(56, 198, 149, 0.6), rgba(0, 0, 0, .4));}
+  &_v::after {background-image: linear-gradient(to top, rgba(178, 124, 245, 0.6), rgba(0, 0, 0, .4));}
+  &_y::after {background-image: linear-gradient(to top, rgba(254, 185, 96, 0.6), rgba(0, 0, 0, .4));}
+}
+
 .btn {
   display: inline-block;
   white-space: nowrap;
