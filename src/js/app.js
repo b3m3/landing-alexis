@@ -3,6 +3,8 @@ import burger from './lib/burger.js';
 import fixedHeader from './lib/fixedHeader.js';
 import playVideo from './modules/play-video.js';
 import {tabs, createDots} from './modules/tabs.js';
+import pageScrollEvents from './lib/pageScrollEvents.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
@@ -14,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   tabs('.card-team', '.info-team__item', '.info-team');
   createDots();
   tabs('.testimonials__dots span', '.item-testimonials', '.testimonials__items');
+  pageScrollEvents();
 });
