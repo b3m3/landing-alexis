@@ -4,16 +4,20 @@
   left: 0;
   top: 0;
   z-index: 50;
-  // &.scroll {
-  //   .header__wrapper {
-  //       position: fixed;
-  //   }
-  //   .header__main {
-  //       min-height: 50px;
-  //   }
-  // }
+  &.fixed {
+    .header__wrapp {
+      width: 100%;
+      position: fixed;
+      background-color: rgba(38, 39, 50, 0.85);
+    }
+    .header__main {min-height: 50px;}
+    .menu__link, .logo-header__logo {color: #fff;}
+  }
   &__wrapp {
     background-color: #fff;
+    transition: .6s ease;
+
+    @include tablet {background-color: rgba(38, 39, 50, 0.85);}
   }
   &__main {
     min-height: rem(75);
@@ -21,6 +25,8 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(20);
+    transition: .6s ease;
+
     @include tablet {
       min-height: rem(50);
     }
@@ -33,8 +39,10 @@
     font-size: rem(35);
     line-height: 0.77;
     color: inherit;
-    & span {
-        color: $red;
+    & span {color: $red;}
+    
+    @include tablet {
+      color: #fff;
     }
   }
 }
@@ -48,7 +56,7 @@
   &__link {
     font-size: rem(14);
     font-weight: 500;
-    line-height: 1.93;
+    line-height: rem(22);
     color: #272727;
     transition: .3s ease;
     

@@ -1,6 +1,19 @@
 .contact {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('../img/connection/01.jpg');
+    background-size: cover;
+  }
   &__main {
     &::before{content: '10';}
+    @include fit('padding-bottom', 500, 400, 1);
+    @include mobile-l {padding-bottom: rem(600);}
   }
   &__form {
     display: flex;

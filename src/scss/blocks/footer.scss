@@ -1,9 +1,16 @@
 .footer {
-  display: block;
+  &__container {
+    position: relative;
+  }
   &__main {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  &__body {
     position: relative;
     background-color: rgba(38, 39, 50, 0.85);
-    @include fit('margin-top', 149, 50, 1);
     @include fit('margin-bottom', 126, 50, 1);
     @include fit('padding-top', 63, 20, 1);
     @include fit('padding-bottom', 62, 20, 1);
@@ -16,11 +23,7 @@
       text-align: center;
       grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     }
-    @include mobile-l {
-      margin-left: rem(-15);
-      margin-right: rem(-15);
-      grid-template: repeat(4, 1fr) / 1fr;
-    }
+    @include mobile-l {grid-template: repeat(4, 1fr) / 1fr;}
   }
   &__col {
     display: flex;
