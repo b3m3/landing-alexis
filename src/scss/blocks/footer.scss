@@ -1,0 +1,71 @@
+.footer {
+  display: block;
+  &__main {
+    position: relative;
+    background-color: rgba(38, 39, 50, 0.85);
+    @include fit('margin-top', 149, 50, 1);
+    @include fit('margin-bottom', 126, 50, 1);
+    @include fit('padding-top', 63, 20, 1);
+    @include fit('padding-bottom', 62, 20, 1);
+    display: grid;
+    gap: rem(20);
+    grid-template: auto / repeat(4, 1fr);
+    @include tablet {
+      padding-left: rem(10);
+      padding-right: rem(10);
+      text-align: center;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+    @include mobile-l {
+      margin-left: rem(-15);
+      margin-right: rem(-15);
+      grid-template: repeat(4, 1fr) / 1fr;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    @include fit('gap', 30, 20, 1);
+    &:first-child {text-align: center;}
+  }
+  &__title {
+    font-size: rem(18);
+    font-weight: 500;
+    &_green {color: $green;}
+    &_violet {color: $violet;}
+    &_yellow {color: $yellow;}
+  }
+  &__text {
+    font-size: re(16);
+    line-height: rem(26);
+    color: #fef4f2;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+    @include tablet {
+      justify-content: center;
+    }
+  }
+  &__social-icon {
+    font-size: rem(30);
+    color: #fff;
+    transition: .3s ease;
+    &_red {&:hover{color: $red;}}
+    &_green {&:hover{color: $green;}}
+    &_violet {&:hover{color: $violet;}}
+    &_yellow {&:hover{color: $yellow;}}
+  }
+}
+
+.logo-footer {
+  &__logo {
+    font-family: 'Wisdom';
+    font-size: rem(50);
+    color: #fef4f2;
+    & span {
+      color: #fc5f45;
+    }
+  }
+}
