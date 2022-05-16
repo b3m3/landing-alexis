@@ -88,17 +88,17 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 @font-face {
-  font-family: "Poppins";
-  font-display: swap;
-  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("ttf");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "LibreBaskerville";
   font-display: swap;
   src: url("../fonts/LibreBaskerville-Regular.woff2") format("woff2"), url("../fonts/LibreBaskerville-Regular.woff") format("woff"), url("../fonts/LibreBaskerville-Regular.ttf") format("ttf");
   font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("ttf");
+  font-weight: 500;
   font-style: normal;
 }
 @font-face {
@@ -882,6 +882,7 @@ body {
   z-index: 2;
 }
 .about__info {
+  overflow: hidden;
   position: absolute;
   right: 0;
   z-index: 2;
@@ -1033,6 +1034,7 @@ body {
 
 /* video */
 .video__main {
+  overflow: hidden;
   margin-top: 150px;
   position: relative;
   display: grid;
@@ -1117,6 +1119,7 @@ body {
   content: "03";
 }
 .portfolio__body {
+  overflow: hidden;
   display: grid;
   grid-auto-rows: minmax(18rem, 1fr);
   gap: 1.3125rem;
@@ -1197,6 +1200,7 @@ body {
   background-color: #f7f7f7;
 }
 .team__main {
+  overflow: hidden;
   margin-top: 150px;
   padding-bottom: 150px;
 }
@@ -1574,6 +1578,9 @@ body {
 }
 
 /* work */
+.work__main {
+  overflow: hidden;
+}
 .work__main::before {
   content: "05";
 }
@@ -2000,6 +2007,9 @@ body {
 .testimonials__body {
   position: relative;
 }
+.testimonials__items {
+  overflow: hidden;
+}
 .testimonials__item {
   display: none;
   align-items: center;
@@ -2138,6 +2148,7 @@ body {
   }
 }
 .select__bottom {
+  overflow: hidden;
   padding-top: 150px;
   display: flex;
   align-items: center;
@@ -2426,6 +2437,7 @@ body {
 
 /* subscribe */
 .subscribe__main {
+  overflow: hidden;
   padding-top: 149px;
   padding-bottom: 149px;
   padding-left: 1.5625rem;
@@ -2604,6 +2616,7 @@ body {
   left: 0;
 }
 .footer__body {
+  overflow: hidden;
   position: relative;
   background-color: rgba(38, 39, 50, 0.85);
   margin-bottom: 126px;

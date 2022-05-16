@@ -3,6 +3,7 @@
     &::before {content: '03';}
   }
   &__body {
+    overflow: hidden;
     display: grid;
     grid-auto-rows: minmax(rem(288), 1fr);
     gap: rem(21);

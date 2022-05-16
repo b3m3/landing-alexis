@@ -1,6 +1,7 @@
 .team {
   background-color: #f7f7f7;
   &__main {
+    overflow: hidden;
     @include fit('margin-top', 150, 50, 1);
     @include fit('padding-bottom', 150, 50, 1);
     &::before{content: '04';}
@@ -13,8 +14,6 @@
   &__cards {
     display: grid;
     @include fit('gap', 29, 10, 1);
-    // grid-auto-rows: minmax(rem(350), 1fr);
-    // grid-template-columns: repeat(auto-fit, minmax(rem(263), 1fr));
     grid-template: minmax(rem(350), 1fr) / repeat(4, 1fr);
     @include laptop {
       grid-template: repeat(2, minmax(rem(350), 1fr)) / repeat(2, 1fr);

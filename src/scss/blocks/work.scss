@@ -1,5 +1,6 @@
 .work {
   &__main {
+    overflow: hidden;
     &::before{content: '05';}
   }
   &__body {

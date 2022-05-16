@@ -1,5 +1,6 @@
 .subscribe {
   &__main {
+    overflow: hidden;
     @include fit('padding-top', 149, 0, 1);
     @include fit('padding-bottom', 149, 50, 1);
     padding-left: rem(25);
