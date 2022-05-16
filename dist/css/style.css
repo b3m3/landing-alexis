@@ -88,17 +88,17 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 @font-face {
-  font-family: "LibreBaskerville";
-  font-display: swap;
-  src: url("../fonts/LibreBaskerville-Regular.woff2") format("woff2"), url("../fonts/LibreBaskerville-Regular.woff") format("woff"), url("../fonts/LibreBaskerville-Regular.ttf") format("ttf");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Poppins";
   font-display: swap;
   src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.ttf") format("ttf");
   font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "LibreBaskerville";
+  font-display: swap;
+  src: url("../fonts/LibreBaskerville-Regular.woff2") format("woff2"), url("../fonts/LibreBaskerville-Regular.woff") format("woff"), url("../fonts/LibreBaskerville-Regular.ttf") format("ttf");
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -2308,6 +2308,76 @@ body {
 @media (max-width: 1140px) {
   .posts-blog__top {
     gap: calc(10px + 15 * ((100vw - 320px) / 820));
+  }
+}
+
+/* subscribe */
+.subscribe__main {
+  padding-top: 149px;
+  padding-bottom: 149px;
+  padding-left: 1.5625rem;
+  padding-right: 1.5625rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.3125rem;
+}
+@media (max-width: 1140px) {
+  .subscribe__main {
+    padding-top: calc(0px + 149 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 1140px) {
+  .subscribe__main {
+    padding-bottom: calc(50px + 99 * ((100vw - 320px) / 820));
+  }
+}
+@media (max-width: 425px) {
+  .subscribe__main {
+    align-items: inherit;
+  }
+}
+.subscribe__title {
+  font-size: 30px;
+  color: #272727;
+}
+@media (max-width: 1140px) {
+  .subscribe__title {
+    font-size: calc(22px + 8 * ((100vw - 320px) / 820));
+  }
+}
+.subscribe__form {
+  display: inline-grid;
+  justify-content: center;
+  grid-template: minmax(3.125rem, auto)/minmax(auto, 18.6875rem) minmax(auto, 11.3125rem);
+}
+@media (max-width: 425px) {
+  .subscribe__form {
+    display: grid;
+    gap: 1.25rem;
+    grid-template: repeat(2, minmax(3.125rem, auto))/1fr;
+  }
+}
+
+.form-subscribe__input {
+  border: solid 2px #efefef;
+  background-color: #f7f7f7;
+  padding: 0 0 0 1.8125rem;
+  font-size: 1rem;
+  border-radius: 1.5625rem 0 0 1.5625rem;
+}
+@media (max-width: 425px) {
+  .form-subscribe__input {
+    border-radius: 1.5625rem;
+  }
+}
+.form-subscribe__button {
+  border-radius: 0 1.5625rem 1.5625rem 0;
+}
+@media (max-width: 425px) {
+  .form-subscribe__button {
+    border-radius: 1.5625rem;
   }
 }
 

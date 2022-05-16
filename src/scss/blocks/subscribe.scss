@@ -1,0 +1,49 @@
+.subscribe {
+  &__main {
+    @include fit('padding-top', 149, 0, 1);
+    @include fit('padding-bottom', 149, 50, 1);
+    padding-left: rem(25);
+    padding-right: rem(25);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(69);
+    @include mobile-l {
+      align-items: inherit;
+    }
+  }
+  &__title {
+    @include fit('font-size', 30, 22, 1);
+    color: #272727;
+  }
+  &__form {
+    display: inline-grid;
+    justify-content: center;
+    grid-template: minmax(rem(50), auto) / minmax(auto, rem(299)) minmax(auto, rem(181));
+    @include mobile-l {
+      display: grid;
+      gap: rem(20);
+      grid-template: repeat(2, minmax(rem(50), auto)) / 1fr;
+    }
+  }
+}
+
+.form-subscribe {
+  &__input {
+    border: solid 2px #efefef;
+    background-color: #f7f7f7;
+    padding: 0 0 0 rem(29);
+    font-size: rem(16);
+    border-radius: rem(25) 0 0 rem(25);
+    @include mobile-l {
+      border-radius: rem(25);
+    }
+  }
+  &__button {
+    border-radius: 0 rem(25) rem(25) 0;
+    @include mobile-l {
+      border-radius: rem(25);
+    }
+  }
+}
