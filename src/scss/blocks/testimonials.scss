@@ -62,9 +62,6 @@
     & span {
       cursor: pointer;
       position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       width: rem(18);
       height: rem(18);
       border: 1px solid #fff;
@@ -76,6 +73,9 @@
         &::before {
           position: absolute;
           content: '';
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
           width: rem(10);
           height: rem(10);
           background-color: $red;
