@@ -1,7 +1,6 @@
 .team {
   background-color: #f7f7f7;
   &__main {
-    overflow: hidden;
     @include fit('margin-top', 150, 50, 1);
     @include fit('padding-bottom', 150, 50, 1);
     &::before{content: '04';}
